@@ -1,0 +1,145 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/ivQRCode"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="16dp" />
+
+        <!-- Judul Halaman -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="12dp"
+            android:text="Halaman Pembayaran"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Daftar Item yang Dipesan -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Daftar Pesanan"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPesanan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+        <!-- Total Harga -->
+        <TextView
+            android:id="@+id/tvTotalHarga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total: Rp 0"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="end"
+            android:layout_marginTop="16dp" />
+
+        <!-- Pilihan untuk Menggunakan Poin -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Poin Anda"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp" />
+
+        <!-- Tampilkan jumlah poin pengguna -->
+        <TextView
+            android:id="@+id/tvPoinPengguna"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Poin Anda: 0"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Switch untuk memilih penggunaan poin -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gunakan poin untuk diskon"
+                android:textSize="14sp"
+                android:layout_marginEnd="8dp" />
+
+            <Switch
+                android:id="@+id/switchGunakanPoin"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:thumbTint="@color/primary"
+                android:trackTint="@color/primary"/>
+        </LinearLayout>
+
+        <!-- Pilih Metode Pembayaran -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pilih Metode Pembayaran"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp" />
+
+        <RadioGroup
+            android:id="@+id/rgMetodePembayaran"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbTransfer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transfer Bank"
+                app:buttonTint="@color/primary"/>
+
+            <RadioButton
+                android:id="@+id/rbEWallet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="E-Wallet"
+                app:buttonTint="@color/primary"/>
+
+            <RadioButton
+                android:id="@+id/rbCOD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cash on Delivery (COD)"
+                app:buttonTint="@color/primary"/>
+        </RadioGroup>
+
+        <!-- Tombol Konfirmasi -->
+        <Button
+            android:id="@+id/btnKonfirmasiPembayaran"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/primary"
+            android:text="Konfirmasi Pembayaran"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>

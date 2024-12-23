@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:text="Alamat"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:layout_marginTop="?actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Gambar Profil -->
+            <ImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_rounded"
+                android:scaleType="centerCrop"
+                android:src="@drawable/location" />
+
+            <!-- Email Pemilik -->
+
+            <!-- Alamat Rumah -->
+            <TextView
+                android:id="@+id/txtAlamatTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alamat Rumah"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/txtAlamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jalan Raya No.123, RT 001/RW 002, Kota XYZ, Provinsi ABC"
+                android:textSize="16sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Detail Tempat -->
+            <TextView
+                android:id="@+id/txtDetailTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Detail Tempat"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/txtDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dekat dengan taman kota dan pusat perbelanjaan utama."
+                android:textSize="16sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Tombol WA -->
+            <Button
+                android:id="@+id/btnSimpan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/primary"
+                android:text="Ubah"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
